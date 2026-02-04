@@ -35,8 +35,7 @@ namespace RezerwacjaKino.Data
               tytul          TEXT NOT NULL,
               opis           TEXT,
               czas_min       INTEGER NOT NULL,
-              poster_path    TEXT,
-              omdb_id        TEXT
+              poster_path    TEXT
             );
 
             CREATE TABLE IF NOT EXISTS Sala (
@@ -102,18 +101,36 @@ namespace RezerwacjaKino.Data
             { 
                 cmd.Transaction = tx;
                 cmd.CommandText = @"
-                INSERT INTO Film (tytul, opis, czas_min, poster_path, omdb_id) VALUES
-                ('Dune', 'Sci-fi', 155, 'Posters/DUNE.jpg', NULL),
-                ('Incepcja', 'Thriller', 148, 'Posters/INCEPCJA.jpg', NULL);
+                INSERT INTO Film (tytul, opis, czas_min, poster_path) VALUES
+                ('Dune', 'Sci-fi', 155, 'Posters/DUNE.jpg'),
+                ('Incepcja', 'Thriller', 148, 'Posters/INCEPCJA.jpg'),
+                ('Harry Potter i Kamien Filozoficzny', 'Fantasy', 152, 'Posters/HARRY_POTTER.jpg'),
+                ('Avengers: Endgame', 'Akcja / Sci-fi', 181, 'Posters/AVENGERS.jpg'),
+                ('Interstellar', 'Sci-fi', 169, 'Posters/INTERSTELLAR.jpg'),
+                ('Matrix', 'Sci-fi / Akcja', 136, 'Posters/MATRIX.jpg');
 
                 INSERT INTO Sala (nazwa, liczba_rzedow, miejsca_w_rzedzie) VALUES
                 ('Sala 1', 6, 10),
-                ('Sala 2', 8, 12);
+                ('Sala 2', 8, 12),
+                ('Sala 3', 10, 14),
+                ('Sala VIP', 5, 8);
 
                 INSERT INTO Seans (fk_id_film, fk_id_sala, start_at, cena_podstawowa, ograniczenia) VALUES
                 (1, 1, '2026-01-10 18:00', 25.0, '16+'),
-                (1, 1, '2026-01-10 20:30', 27.0, '16+'),
-                (2, 2, '2026-01-11 09:00', 26.0, '16+');";
+                (1, 2, '2026-01-10 20:30', 27.0, '16+'),
+                (2, 2, '2026-01-11 09:00', 26.0, '16+'),
+
+                (3, 3, '2026-01-11 16:00', 24.0, '7+'),
+                (3, 1, '2026-01-12 12:30', 22.0, '7+'),
+
+                (4, 4, '2026-01-11 19:30', 35.0, '13+'),
+                (4, 2, '2026-01-12 20:00', 29.0, '13+'),
+
+                (5, 1, '2026-01-13 18:15', 28.0, '13+'),
+                (5, 3, '2026-01-14 20:15', 30.0, '13+'),
+
+                (6, 2, '2026-01-15 17:45', 25.0, '16+'),
+                (6, 3, '2026-01-15 21:00', 27.0, '16+');";
 
                 cmd.ExecuteNonQuery();
             }

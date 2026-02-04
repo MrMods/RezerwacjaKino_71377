@@ -97,7 +97,7 @@ namespace RezerwacjaKino.UI
             {
                 HeaderText = "Data",
                 DataPropertyName = "StartOd",
-                DefaultCellStyle = new DataGridViewCellStyle { Format = "dd:MM:yyyy" },
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "dd-MM-yyyy" },
                 Width = 160
             });
             dgv_Seanse.Columns.Add(new DataGridViewTextBoxColumn
@@ -152,7 +152,7 @@ namespace RezerwacjaKino.UI
             if (dgv_Seanse.CurrentRow?.DataBoundItem is not Seans s) return;
 
             lbl_FilmTitle.Text = s.FilmTytul;
-            lbl_Startod.Text = $"| {s.StartOd:dd:MM:yyy HH:mm} | {s.SalaNazwa} | {s.Ograniczenia} |";
+            lbl_Startod.Text = $"| {s.StartOd:dd-MM-yyyy HH:mm} | {s.SalaNazwa} | {s.Ograniczenia} |";
             lbl_cena.Text = $"{s.CenaPodstawowa:0.00} zł";
 
             if (!string.IsNullOrWhiteSpace(s.PosterPath))

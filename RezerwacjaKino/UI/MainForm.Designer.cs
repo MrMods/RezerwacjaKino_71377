@@ -72,7 +72,7 @@
             // 
             lbl_Startod.AutoSize = true;
             lbl_Startod.Font = new Font("Segoe UI", 12F);
-            lbl_Startod.Location = new Point(13, 371);
+            lbl_Startod.Location = new Point(13, 392);
             lbl_Startod.Name = "lbl_Startod";
             lbl_Startod.Size = new Size(52, 21);
             lbl_Startod.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             lbl_cena.AutoSize = true;
             lbl_cena.Font = new Font("Segoe UI", 14F);
-            lbl_cena.Location = new Point(175, 409);
+            lbl_cena.Location = new Point(186, 421);
             lbl_cena.Name = "lbl_cena";
             lbl_cena.Size = new Size(63, 25);
             lbl_cena.TabIndex = 6;
@@ -111,11 +111,12 @@
             // 
             // lbl_FilmTitle
             // 
-            lbl_FilmTitle.AutoSize = true;
+            lbl_FilmTitle.AutoEllipsis = true;
             lbl_FilmTitle.Font = new Font("Segoe UI", 16F);
             lbl_FilmTitle.Location = new Point(13, 328);
+            lbl_FilmTitle.MaximumSize = new Size(320, 0);
             lbl_FilmTitle.Name = "lbl_FilmTitle";
-            lbl_FilmTitle.Size = new Size(71, 30);
+            lbl_FilmTitle.Size = new Size(255, 64);
             lbl_FilmTitle.TabIndex = 3;
             lbl_FilmTitle.Text = "label1";
             // 
