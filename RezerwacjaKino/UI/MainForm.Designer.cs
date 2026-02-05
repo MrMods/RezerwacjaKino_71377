@@ -41,6 +41,17 @@
             pnlNaglowek.SuspendLayout();
             SuspendLayout();
             // 
+            // lbl_FilmTitle
+            // 
+            lbl_FilmTitle.AutoEllipsis = true;
+            lbl_FilmTitle.Font = new Font("Segoe UI", 16F);
+            lbl_FilmTitle.Location = new Point(13, 328);
+            lbl_FilmTitle.MaximumSize = new Size(320, 0);
+            lbl_FilmTitle.Name = "lbl_FilmTitle";
+            lbl_FilmTitle.Size = new Size(255, 64);
+            lbl_FilmTitle.TabIndex = 3;
+            lbl_FilmTitle.Text = "label1";
+            // 
             // dgv_Seanse
             // 
             dgv_Seanse.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -109,17 +120,6 @@
             pnlNaglowek.Size = new Size(303, 460);
             pnlNaglowek.TabIndex = 7;
             // 
-            // lbl_FilmTitle
-            // 
-            lbl_FilmTitle.AutoEllipsis = true;
-            lbl_FilmTitle.Font = new Font("Segoe UI", 16F);
-            lbl_FilmTitle.Location = new Point(13, 328);
-            lbl_FilmTitle.MaximumSize = new Size(320, 0);
-            lbl_FilmTitle.Name = "lbl_FilmTitle";
-            lbl_FilmTitle.Size = new Size(255, 64);
-            lbl_FilmTitle.TabIndex = 3;
-            lbl_FilmTitle.Text = "label1";
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -132,7 +132,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MainForm";
-            Text = "MainForm";
+            Text = "RezerwacjaKino";
             ((System.ComponentModel.ISupportInitialize)dgv_Seanse).EndInit();
             ((System.ComponentModel.ISupportInitialize)pic_Poster).EndInit();
             pnlNaglowek.ResumeLayout(false);

@@ -333,7 +333,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ReservationForm";
-            Text = "ReservationForm";
+            Text = "Rezerwacja";
             TransparencyKey = SystemColors.ActiveBorder;
             pnlPanel.ResumeLayout(false);
             pnlPanel.PerformLayout();

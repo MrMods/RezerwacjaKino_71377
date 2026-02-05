@@ -109,7 +109,7 @@ namespace RezerwacjaKino.Services
                 var zmiana = biletRepo.AnulujBilet(idBiletu, klucz);
                 if (zmiana == 0)
                     return (false, "Nie znaleziono aktywnej rezerwacji dla podanych danych.");
-                return (true, $"Anulowano {zmiana} bilet.");
+                return (true, $"Anulowano bilet.");
             }
             catch (ArgumentException ex)
             {

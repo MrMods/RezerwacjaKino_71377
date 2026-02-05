@@ -105,7 +105,7 @@ namespace RezerwacjaKino.UI
                 return;
             }
 
-            var confirm = MessageBox.Show($"Anulowac rezerwację? \n\n{row.FilmTytul}\n{row.StartOd}\nMiejsca: {row.MiejscaText}", "Potwierdzenie", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var confirm = MessageBox.Show($"Anulowac rezerwację? \n\n{row.FilmTytul}\n{row.StartOd}\nMiejsce: {row.MiejscaText}", "Potwierdzenie", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (confirm != DialogResult.Yes) return;
 
             var (ok, wiadomosc) = service.AnulujRezerwacje(row.IdBilet, txtemailtel.Text);

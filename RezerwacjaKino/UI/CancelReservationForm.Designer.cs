@@ -141,7 +141,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "CancelReservationForm";
-            Text = "CancelReservationForm";
+            Text = "Anulowanie rezerwacji";
             ((System.ComponentModel.ISupportInitialize)dgvRezerwacje).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
