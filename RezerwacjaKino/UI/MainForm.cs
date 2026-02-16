@@ -28,7 +28,6 @@ namespace RezerwacjaKino.UI
             service = new RezerwacjaService();
             Load += MainForm_Load;
             dgv_Seanse.CellClick += dgv_Seanse_CellClick;
-            dgv_Seanse.CellFormatting += dgv_Seanse_CellFormatting;
             btn_Rezerwuj.Click += btn_Rezerwuj_Click;
 
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -164,17 +163,6 @@ namespace RezerwacjaKino.UI
             else pic_Poster.Image = null;
         }
         private readonly Dictionary<string, Image> _posterCache = new();
-
-        private void dgv_Seanse_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-            if (dgv_Seanse.Columns[e.ColumnIndex].Name != "Poster") return;
-
-            if (dgv_Seanse.Rows[e.RowIndex].DataBoundItem is not Seans s) return;
-
-            e.Value = GetPosterImage(s.PosterPath);
-            e.FormattingApplied = true;
-        }
 
         private Image? GetPosterImage(string? posterPath)
         {
