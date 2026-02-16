@@ -51,6 +51,7 @@ namespace RezerwacjaKino.UI
             dgvRezerwacje.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvRezerwacje.RowHeadersVisible = false;
             dgvRezerwacje.BorderStyle = BorderStyle.None;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             dgvRezerwacje.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvRezerwacje.GridColor = SystemColors.ControlLight;
 
